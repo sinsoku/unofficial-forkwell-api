@@ -15,4 +15,8 @@ build:
         code: bundle exec rake spec
 deploy:
   steps:
-    - heroku-deploy
+    - heroku-deploy:
+        install-toolbelt: true
+    - script:
+        name: Update database
+        code: heroku run rake db:migrate --app $HEROKU_APP_NAME
