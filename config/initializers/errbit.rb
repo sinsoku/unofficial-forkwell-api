@@ -3,4 +3,5 @@ Airbrake.configure do |config|
   config.host    = 'sinsoku-errbit.herokuapp.com'
   config.port    = 80
   config.secure  = config.port == 443
+  config.ignore_only  = []
 end
