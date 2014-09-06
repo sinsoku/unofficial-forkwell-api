@@ -43,6 +43,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'sqlite3'
+  gem 'dotenv-rails'
 end
 
 group :development, :test do
@@ -58,3 +59,4 @@ gem 'activerecord-import'
 gem 'ransack'
 gem 'kaminari'
 gem 'haml-rails'
+gem 'airbrake'
