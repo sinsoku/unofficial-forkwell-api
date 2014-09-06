@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       resources :jobs, only: :index
     end
   end
+  resources :docs, only: :show, constraints: {id: /.*/}
+  root to: 'docs#show', id: 'api'
 end
