@@ -11,6 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140906155521) do
+
+  create_table "companies", force: true do |t|
+    t.string   "name",        null: false
+    t.string   "screen_name", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jobs", force: true do |t|
+    t.integer  "company_id",      null: false
+    t.string   "title",           null: false
+    t.text     "raw_description", null: false
+    t.datetime "published_at",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "jobs", ["company_id"], name: "index_jobs_on_company_id"
 
 end
