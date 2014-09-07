@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :dev do
       resources :jobs, only: :index
       resources :interests, only: :create
+      resources :entries, only: :create
     end
   end
   resources :docs, only: :show, constraints: {id: /.*/}
