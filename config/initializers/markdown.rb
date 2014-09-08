@@ -8,7 +8,8 @@ end
 MarkdownRails.configure do |config|
   markdown = Redcarpet::Markdown.new CodeRayify,
     fenced_code_blocks: true,
-    autolink: true
+    autolink: true,
+    tables: true
   config.render do |markdown_source|
     markdown.render(markdown_source)
   end
