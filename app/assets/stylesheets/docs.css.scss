@@ -1,0 +1,6 @@
+body.docs {
+  table {
+    @extend .table;
+    @extend .table-hover;
+  }
+}

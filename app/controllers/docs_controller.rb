@@ -1,4 +1,6 @@
 class DocsController < ApplicationController
+  layout 'docs'
+
   def show
     if doc_exist?
       render doc_path
