@@ -1,0 +1,57 @@
+%h1 応募API
+%p
+  %a(href="https://jobs.forkwell.com/") Forkwell Jobs
+  にログインし、求人に応募します。
+
+%h2 API URL
+%p POST api/dev/entries
+
+%h2 Parameters
+
+%table.table.table-hover
+  %tbody
+    %tr
+      %td
+        %span type
+        %span (required)
+      %td	ログインするSNSのtype (現状、"twitter"のみ実装)
+    %tr
+      %td
+        %span username
+        %span (required)
+      %td ログインするSNSのusername
+    %tr
+      %td
+        %span password
+        %span (required)
+      %td ログインするSNSのpassword
+    %tr
+      %td
+        %span job_id
+        %span (required)
+      %td 応募する求人ID
+    %tr
+      %td
+        %span intendment
+        %span (required)
+      %td エントリーの意図。join_soon, will_join, talk_only のどれかの値
+    %tr
+      %td
+        %span salary
+        %span (optional)
+      %td 希望年収
+
+%h2 Example Request
+%table.table.table-hover
+  %tbody
+    %tr
+      %td POST
+      %td api/dev/entries
+    %tr
+      %td POST Data
+      %td type=twitter&username=<screen_name>&password=<password>&job_id=308&intendment=join_soon&salary=1000
+
+%h2 Example Response
+%pre
+  %code.json
+    :plain

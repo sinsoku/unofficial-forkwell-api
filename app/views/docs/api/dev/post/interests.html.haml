@@ -1,0 +1,47 @@
+%h1 「ちょっと興味ある！」 投稿API
+%p
+  %a(href="https://jobs.forkwell.com/") Forkwell Jobs
+  にログインし、求人に「ちょっと興味ある！」を送ります。
+
+%h2 API URL
+%p POST api/dev/interests
+
+%h2 Parameters
+
+%table.table.table-hover
+  %tbody
+    %tr
+      %td
+        %span type
+        %span (required)
+      %td	ログインするSNSのtype (現状、"twitter"のみ実装)
+    %tr
+      %td
+        %span username
+        %span (required)
+      %td ログインするSNSのusername
+    %tr
+      %td
+        %span password
+        %span (required)
+      %td ログインするSNSのpassword
+    %tr
+      %td
+        %span job_id
+        %span (required)
+      %td「ちょっと興味ある！」を送る求人ID
+
+%h2 Example Request
+%table.table.table-hover
+  %tbody
+    %tr
+      %td POST
+      %td api/dev/interests
+    %tr
+      %td POST Data
+      %td type=twitter&username=&password=&job_id=308
+
+%h2 Example Response
+%pre
+  %code.json
+    :plain

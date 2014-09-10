@@ -1,0 +1,38 @@
+%h1 API Document
+%p
+  これは
+  %a(href="https://forkwell.com/") Forkwell
+  、
+  %a(href="https://jobs.forkwell.com/") Forkwell Jobs
+  の非公式APIです。
+%p 求人情報を毎日スクレイピングしてDBに保存し、それをAPIで取得できるようにしてあります。
+
+%h2 dev
+%p 開発中のAPIです。APIの仕様が予告無く変更される可能性があります。
+
+%table.table.table-hover
+  %thead
+  %tr
+    %th Resource
+    %th Description
+  %tbody
+    %tr
+      %td= link_to 'GET jobs', 'docs/api/dev/get/jobs'
+      %td 求人情報の検索APIです
+    %tr
+      %td= link_to 'POST interests', 'docs/api/dev/post/interests'
+      %td ちょっと興味ある！を投稿するAPIです
+    %tr
+      %td= link_to 'POST entries', 'docs/api/dev/post/entries'
+      %td 応募API
+
+%h2 v1
+%p 安定板のAPIです。devのAPIが安定したらv1のapiとしてリリースします。
+
+%table.table.table-hover
+  %thead
+  %tr
+    %th Resource
+    %th Description
+  %tbody
+    %tr
