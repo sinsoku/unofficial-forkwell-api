@@ -4,20 +4,22 @@
 
 ## API URL
 
-POST api/dev/jobs
+POST api/dev/interests
 
 ## Parameters
 
 |   |   |
 |---|---|
-| q (optional)    | [activerecord-hackery/ransack](https://github.com/activerecord-hackery/ransack)のquery構文が使えます |
-| page (optional) | ページ番号を指定して求人を取得します |
+| type (required) | ログインするSNSのtype (現状、"twitter"のみ実装) |
+| username (required) | ログインするSNSのusername |
+| password (required) | ログインするSNSのpassword |
+| job_id (required) | 「ちょっと興味ある！」を送る求人ID |
 
 ## Example Request
 
 |   |   |
 |---|---|
-| POST | api/dev/jobs |
+| POST | api/dev/interests |
 | POST Data | type=twitter&username=<screen_name>&password=<password>&job_id=308 |
 
 ## Example Response
