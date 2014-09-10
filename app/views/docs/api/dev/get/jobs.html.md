@@ -15,7 +15,7 @@
 
 ## Example Request
 
-[GET /api/dev/jobs?q[company_name_cont]=grooves](/api/dev/jobs?q[company_name_cont]=grooves)
+[GET /api/dev/jobs?q[company\_name\_cont]=grooves](/api/dev/jobs?q[company_name_cont]=grooves)
 
 ## Example Response
 
