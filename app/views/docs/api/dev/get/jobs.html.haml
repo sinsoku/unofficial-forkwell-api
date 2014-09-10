@@ -4,7 +4,7 @@
 %p クエリに一致した求人を25件ずつ返します。
 
 %h2 API URL
-= link_to 'GET api/dev/jobs', api_dev_jobs_path
+%p GET api/dev/jobs
 
 %h2 Parameters
 %table.table.table-hover
@@ -23,7 +23,7 @@
       %td ページ番号を指定して求人を取得します
 
 %h2 Example Request
-= link_to 'GET api/dev/jobs?q[company_name_cont]=grooves', api_dev_jobs_path(q: {company_screen_name_cont: :grooves})
+= link_to 'GET api/dev/jobs?q[company_name_cont]=grooves', api_dev_jobs_path(q: {company_name_cont: :grooves})
 
 %h2 Example Response
 %pre
