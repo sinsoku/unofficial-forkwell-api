@@ -1,7 +1,9 @@
 class DocsController < ApplicationController
+  layout 'docs'
+
   def show
     if doc_exist?
-      render params[:id]
+      render doc_path
     else
       raise ActionController::RoutingError.new 'Not Found'
     end
@@ -9,7 +11,11 @@ class DocsController < ApplicationController
 
   private
   def doc_exist?
-    path = Rails.root.join('app/views/docs', "#{params[:id]}*")
+    path = Rails.root.join('app/views', doc_path + '*' )
     Dir.glob(path).present?
+  end
+
+  def doc_path
+    "docs/#{params[:id]}"
   end
 end
