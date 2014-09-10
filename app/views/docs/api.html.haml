@@ -1,9 +1,9 @@
 %h1 API Document
 %p
   これは
-  %a(href="https://forkwell.com/") Forkwell
+  = link_to_forkwell
   、
-  %a(href="https://jobs.forkwell.com/") Forkwell Jobs
+  = link_to_forkwell_jobs
   の非公式APIです。
 %p 求人情報を毎日スクレイピングしてDBに保存し、それをAPIで取得できるようにしてあります。
 
@@ -17,13 +17,13 @@
     %th Description
   %tbody
     %tr
-      %td= link_to 'GET jobs', 'docs/api/dev/get/jobs'
+      %td= link_to_api_doc 'GET jobs', [:dev, :get, :jobs]
       %td 求人情報の検索APIです
     %tr
-      %td= link_to 'POST interests', 'docs/api/dev/post/interests'
+      %td= link_to_api_doc 'POST interests', [:dev, :post, :interests]
       %td ちょっと興味ある！を投稿するAPIです
     %tr
-      %td= link_to 'POST entries', 'docs/api/dev/post/entries'
+      %td= link_to_api_doc 'POST entries', [:dev, :post, :entries]
       %td 応募API
 
 %h2 v1
