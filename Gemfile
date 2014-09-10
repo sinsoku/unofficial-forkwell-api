@@ -53,7 +53,11 @@ group :development, :test do
 end
 
 gem 'pg', group: [:production, :test]
-gem 'rails_12factor', group: :production
+
+group :production do
+  gem 'rails_12factor'
+  gem 'google-analytics-rails'
+end
 
 gem 'mechanize'
 gem 'activerecord-import'
