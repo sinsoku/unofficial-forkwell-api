@@ -32,10 +32,14 @@ class JobScraper
     name = page.search('.jobs-title-sub a').text
     screen_name = url.split('/')[1]
     company = Company.find_or_create_by! name: name, screen_name: screen_name
+    google_map_url = page.search('span[itemprop="map"] a')[0][:href]
     Job.new company: company,
       id: url.split('/')[-1],
       title: page.search('.jobs-header-content span[itemprop="title"]').text,
       raw_description: page.search('.jobs-body-inner').text,
-      published_at: page.search('.jobs-header-info .num').text
+      published_at: page.search('.jobs-header-info .num').text,
+      address: google_map_url.split('q=')[-1],
+      min_salary: page.search('.jobs-summary-data-salary .num')[0].text,
+      max_salary: page.search('.jobs-summary-data-salary .num')[1].text
   end
 end

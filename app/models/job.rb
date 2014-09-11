@@ -5,4 +5,5 @@ class Job < ActiveRecord::Base
   validates :title, presence: true
   validates :raw_description, presence: true
   validates :published_at, presence: true
+  validates :min_salary, numericality: {greater_than: 0}
 end
