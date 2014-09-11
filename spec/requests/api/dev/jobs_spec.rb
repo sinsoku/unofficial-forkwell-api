@@ -17,7 +17,7 @@ describe 'Jobs API' do
     it { expect(json.size).to eq 2 }
 
     describe 'job keys' do
-      it { expect(json[0].keys).to eq ['id', 'title', 'raw_description', 'company'] }
+      it { expect(json[0].keys).to eq ['id', 'title', 'raw_description', 'address', 'min_salary', 'max_salary', 'company'] }
     end
 
     describe 'company keys' do
